@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spice Dine - Authentic Bangladeshi Cuisine in Woolloongabba</title>
+  <meta name="description" content="Order online for delivery & takeaway from Spice Dine. Serving authentic Bangladeshi street food, Kacchi Biryani, Goat Haleem, Chicken Jali Kebab, Fuchka, and Halal curries in Woolloongabba, Brisbane.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandRed: '#D9232D',
+            brandGold: '#F59E0B',
+            brandDark: '#111827',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Hide scrollbar for category tabs on mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased selection:bg-brandRed selection:text-white">
+
+  <!-- ========================================== -->
+  <!-- 1. STICKY NAVIGATION BAR -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-50 bg-brandDark/95 backdrop-blur-md border-b border-gray-800 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center space-x-3 group">
+          <div class="w-11 h-11 rounded-full bg-brandRed flex items-center justify-center font-black text-xl text-white shadow-md border-2 border-brandGold group-hover:scale-105 transition transform">
+            SD
+          </div>
+          <div>
+            <span class="text-2xl font-black tracking-wide text-white block leading-tight group-hover:text-brandGold transition">SPICE DINE</span>
+            <span class="text-[10px] text-brandGold font-bold tracking-widest uppercase block -mt-1">Bangladeshi Cuisine</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-300">
+          <a href="#home" class="text-brandGold hover:text-white transition">Home</a>
+          <a href="#menu" class="hover:text-brandGold transition">Menu</a>
+          <a href="#reviews" class="hover:text-brandGold transition">Reviews</a>
+          <a href="#location" class="hover:text-brandGold transition">Location &amp; Delivery</a>
+        </nav>
+
+        <!-- Action CTAs -->
+        <div class="flex items-center space-x-3">
+          <a href="#location" class="hidden sm:inline-flex px-4 py-2 text-xs font-bold text-gray-200 hover:text-white border border-gray-700 hover:border-brandGold rounded-lg transition">
+            Book Table
+          </a>
+          <a href="#menu" class="px-5 py-2.5 text-xs sm:text-sm font-extrabold bg-brandRed hover:bg-red-700 text-white rounded-xl shadow-lg shadow-red-900/40 transition transform hover:-translate-y-0.5 flex items-center space-x-2">
+            <i class="fa-solid fa-utensils"></i>
+            <span>Order Online</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================== -->
+  <!-- 2. HERO SECTION WITH HALAL BADGES -->
+  <!-- ========================================== -->
+  <section id="home" class="relative bg-brandDark min-h-[85vh] flex items-center justify-center overflow-hidden border-b border-gray-800">
+    
+    <!-- Background Image & Dark Gradient Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1920&q=80" 
+           alt="Bangladeshi Culinary Feast" 
+           class="w-full h-full object-cover object-center opacity-25 scale-105 transform">
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-brandDark/80 to-transparent"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      
+      <!-- Halal Tagline Badge -->
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-brandRed/20 border border-brandRed/40 text-brandGold text-xs font-bold tracking-wider uppercase mb-6 shadow-inner">
+        <i class="fa-solid fa-fire text-brandRed"></i>
+        <span>Authentic Halal Dining in Woolloongabba</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-tight mb-6">
+        Experience the True <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandGold via-yellow-400 to-brandRed">
+          Flavours of Dhaka
+        </span> in Brisbane
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-gray-300 font-normal leading-relaxed mb-10">
+        From aromatic Kacchi Biryani and crispy Fuchka to spicy Goat Haleem &amp; tender Chicken Jali Kebabs — prepared fresh daily using traditional spices.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <a href="#menu" class="w-full sm:w-auto px-8 py-4 bg-brandRed hover:bg-red-700 text-white font-bold text-base rounded-xl shadow-xl shadow-red-900/40 transition transform hover:-translate-y-1 flex items-center justify-center space-x-3">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Order Online Now</span>
+        </a>
+        <a href="#location" class="w-full sm:w-auto px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-semibold text-base rounded-xl border border-gray-700 hover:border-brandGold transition transform hover:-translate-y-1 flex items-center justify-center space-x-3">
+          <i class="fa-regular fa-calendar-check text-brandGold"></i>
+          <span>Dine-In &amp; Hours</span>
+        </a>
+      </div>
+
+      <!-- Social Proof / Trust Strip -->
+      <div class="pt-8 border-t border-gray-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-gray-300 text-xs sm:text-sm font-semibold">
+        
+        <div class="flex items-center justify-center space-x-3 bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+          <div class="w-9 h-9 rounded-full bg-emerald-950/80 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+            <i class="fa-solid fa-check-double"></i>
+          </div>
+          <span class="text-left">100% Halal Certified</span>
+        </div>
+
+        <div class="flex items-center justify-center space-x-3 bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+          <div class="w-9 h-9 rounded-full bg-amber-950/80 border border-amber-500/40 flex items-center justify-center text-amber-400 shrink-0">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="text-left">4.2★ Google Rated (140+)</span>
+        </div>
+
+        <div class="flex items-center justify-center space-x-3 bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+          <div class="w-9 h-9 rounded-full bg-blue-950/80 border border-blue-500/40 flex items-center justify-center text-blue-400 shrink-0">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <span class="text-left">Fast Delivery in Brisbane</span>
+        </div>
+
+        <div class="flex items-center justify-center space-x-3 bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+          <div class="w-9 h-9 rounded-full bg-red-950/80 border border-red-500/40 flex items-center justify-center text-red-400 shrink-0">
+            <i class="fa-solid fa-pepper-hot"></i>
+          </div>
+          <span class="text-left">Authentic Recipes</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 3. FEATURED MENU CATEGORIES & DISH GRID -->
+  <!-- ========================================== -->
+  <section id="menu" class="bg-gray-900 py-20 text-white border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-brandGold text-xs font-bold tracking-widest uppercase bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-500/20">
+          Popular Selection
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">
+          Top Rated Specialties
+        </h2>
+        <p class="text-gray-400 text-sm sm:text-base">
+          Browse our customer favorites — cooked daily using fresh local ingredients and imported spices.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center justify-start sm:justify-center space-x-2 sm:space-x-3 overflow-x-auto pb-4 mb-10 no-scrollbar">
+        <button class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-brandRed text-white shadow-md shadow-red-900/40 whitespace-nowrap">
+          Top Sellers
+        </button>
+        <button class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white transition whitespace-nowrap">
+          Street Food &amp; Snacks
+        </button>
+        <button class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white transition whitespace-nowrap">
+          Traditional Curries
+        </button>
+        <button class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white transition whitespace-nowrap">
+          Kebabs &amp; Parathas
+        </button>
+      </div>
+
+      <!-- Dish Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Dish 1: Chicken Jali Kebab -->
+        <div class="bg-gray-800/80 border border-gray-700/60 rounded-2xl overflow-hidden hover:border-brandGold/50 transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80" 
+                   alt="Chicken Jali Kebab" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 right-3 bg-brandDark/90 backdrop-blur-md px-2.5 py-1 rounded-md text-xs font-bold text-brandGold border border-brandGold/30">
+                Top Seller
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-white group-hover:text-brandGold transition">Chicken Jali Kebab</h3>
+                <span class="text-emerald-400 text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800">100% Halal</span>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                Halal chicken mince kebabs, traditionally seasoned with aromatic spices, dipped in egg mixture, and fried golden brown.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-gray-700/50 mt-auto">
+            <span class="text-xs text-gray-400"><i class="fa-solid fa-pepper-hot text-brandRed mr-1"></i> Medium Spice</span>
+            <a href="https://spicedine.yumbojumbo.com.au/menu" target="_blank" class="px-4 py-2 bg-brandRed hover:bg-red-700 text-white text-xs font-bold rounded-lg transition shadow-md">
+              Order $
+            </a>
+          </div>
+        </div>
+
+        <!-- Dish 2: Goat Haleem -->
+        <div class="bg-gray-800/80 border border-gray-700/60 rounded-2xl overflow-hidden hover:border-brandGold/50 transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" 
+                   alt="Goat Haleem" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 right-3 bg-brandDark/90 backdrop-blur-md px-2.5 py-1 rounded-md text-xs font-bold text-brandGold border border-brandGold/30">
+                Street Favorite
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-white group-hover:text-brandGold transition">Goat Haleem</h3>
+                <span class="text-emerald-400 text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800">100% Halal</span>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                Slow-cooked lentil and grain stew with tender goat meat, garnished with fried onions, ginger, and fresh lemon.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-gray-700/50 mt-auto">
+            <span class="text-xs text-gray-400"><i class="fa-solid fa-fire text-amber-500 mr-1"></i> Authentic Rich Stew</span>
+            <a href="https://spicedine.yumbojumbo.com.au/menu" target="_blank" class="px-4 py-2 bg-brandRed hover:bg-red-700 text-white text-xs font-bold rounded-lg transition shadow-md">
+              Order $
+            </a>
+          </div>
+        </div>
+
+        <!-- Dish 3: Fuchka -->
+        <div class="bg-gray-800/80 border border-gray-700/60 rounded-2xl overflow-hidden hover:border-brandGold/50 transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" 
+                   alt="Fuchka" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 right-3 bg-brandDark/90 backdrop-blur-md px-2.5 py-1 rounded-md text-xs font-bold text-brandGold border border-brandGold/30">
+                Must Try
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-white group-hover:text-brandGold transition">Bangladeshi Fuchka</h3>
+                <span class="text-amber-400 text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-amber-950 border border-amber-800">Vegetarian</span>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                Crispy hollow shells stuffed with spiced mashed potatoes and chickpeas, served with tangy tamarind water.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-gray-700/50 mt-auto">
+            <span class="text-xs text-gray-400"><i class="fa-solid fa-leaf text-emerald-400 mr-1"></i> Tangy Street Snack</span>
+            <a href="https://spicedine.yumbojumbo.com.au/menu" target="_blank" class="px-4 py-2 bg-brandRed hover:bg-red-700 text-white text-xs font-bold rounded-lg transition shadow-md">
+              Order $
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Full Menu CTA -->
+      <div class="text-center mt-12">
+        <a href="https://spicedine.yumbojumbo.com.au/menu" target="_blank" class="inline-flex items-center space-x-2 px-8 py-3.5 bg-gray-800 hover:bg-gray-700 text-white font-bold text-sm rounded-xl border border-gray-700 hover:border-brandGold transition">
+          <span>View Complete Online Menu</span>
+          <i class="fa-solid fa-arrow-right text-brandGold"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 4. GOOGLE REVIEWS & TRUST SECTION -->
+  <!-- ========================================== -->
+  <section id="reviews" class="bg-gray-950 py-20 text-white border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Rating Summary Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-emerald-400 text-xs font-bold tracking-widest uppercase bg-emerald-950 px-3 py-1 rounded-full border border-emerald-800">
+            Real Customer Feedback
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+            Loved by Brisbane Locals
+          </h2>
+        </div>
+
+        <!-- Google Star Summary Card -->
+        <div class="mt-6 md:mt-0 bg-gray-900 border border-gray-800 px-6 py-4 rounded-2xl flex items-center space-x-4 shadow-xl">
+          <div class="text-center border-r border-gray-800 pr-4">
+            <span class="text-3xl font-black text-white">4.2</span>
+            <div class="text-amber-400 text-xs flex space-x-0.5 mt-0.5">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <i class="fa-brands fa-google text-blue-400 text-lg"></i>
+              <span class="font-bold text-sm text-gray-200">Google Rating</span>
+            </div>
+            <span class="text-xs text-gray-400">140+ Verified Reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-brandRed text-white font-bold flex items-center justify-center text-sm shadow">
+                  RA
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-white">Rahim Ahmed</h4>
+                  <span class="text-xs text-gray-500">Local Guide • Brisbane</span>
+                </div>
+              </div>
+              <i class="fa-brands fa-google text-gray-600"></i>
+            </div>
+            <div class="text-amber-400 text-xs flex space-x-1 mb-3">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              "Finally, authentic Bangladeshi taste in Woolloongabba! The Goat Haleem and Jali Kebabs taste like Dhaka. Generous portions and friendly staff."
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-gray-800 text-[11px] text-gray-500">
+            Dined in • Verified Review
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm shadow">
+                  SL
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-white">Sarah Lin</h4>
+                  <span class="text-xs text-gray-500">Woolloongabba Resident</span>
+                </div>
+              </div>
+              <i class="fa-brands fa-google text-gray-600"></i>
+            </div>
+            <div class="text-amber-400 text-xs flex space-x-1 mb-3">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              "Tried their Fuchka and handmade parathas for dinner. Everything was super fresh, well-spiced, and 100% Halal. Will definitely reorder!"
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-gray-800 text-[11px] text-gray-500">
+            Takeaway • Verified Review
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow">
+                  TH
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-white">Tariq Hassan</h4>
+                  <span class="text-xs text-gray-500">Student • UQ</span>
+                </div>
+              </div>
+              <i class="fa-brands fa-google text-gray-600"></i>
+            </div>
+            <div class="text-amber-400 text-xs flex space-x-1 mb-3">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              "The Everyday Happy Deal is incredible value for students. Rice, curry, and dal for a very affordable price. Quick delivery to Annerley."
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-gray-800 text-[11px] text-gray-500">
+            Delivery • Verified Review
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 5. LOCATION, HOURS & DELIVERY CHECKER -->
+  <!-- ========================================== -->
+  <section id="location" class="bg-gray-900 py-20 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brandGold text-xs font-bold tracking-widest uppercase bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+          Find Us in Brisbane
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">
+          Location &amp; Delivery Coverage
+        </h2>
+        <p class="text-gray-400 text-sm sm:text-base">
+          Visit our Woolloongabba restaurant or check if we deliver directly to your Brisbane suburb.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        
+        <!-- Left: Map & Opening Hours -->
+        <div class="space-y-8">
+          
+          <div class="bg-gray-800/80 border border-gray-700/60 rounded-2xl p-6 shadow-xl">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 rounded-xl bg-brandRed/20 border border-brandRed/40 flex items-center justify-center text-brandRed text-xl shrink-0">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">Spice Dine Woolloongabba</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                  80 Ipswich Rd, Woolloongabba QLD 4102, Australia
+                </p>
+                <div class="flex flex-wrap gap-4 text-xs font-medium text-gray-400">
+                  <span><i class="fa-solid fa-square-parking text-brandGold mr-1"></i> Parking Available</span>
+                  <span><i class="fa-solid fa-utensils text-brandGold mr-1"></i> Dine-in &amp; Takeaway</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded Map -->
+          <div class="relative w-full h-60 rounded-2xl overflow-hidden border border-gray-700/60 shadow-xl">
+            <iframe 
+              title="Spice Dine Location Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.3872019488!2d153.0336!3d-27.4882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a159580cee5%3A0xcacbc24ab276320e!2s80%20Ipswich%20Rd%2C%20Woolloongabba%20QLD%204102!5e0!3m2!1sen!2sau!4v1700000000000" 
+              class="w-full h-full border-0 filter grayscale contrast-125 opacity-90 hover:grayscale-0 transition duration-500" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+
+          <!-- Opening Hours Table -->
+          <div class="bg-gray-800/80 border border-gray-700/60 rounded-2xl p-6 shadow-xl">
+            <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-700/60">
+              <h4 class="text-base font-bold text-white flex items-center space-x-2">
+                <i class="fa-regular fa-clock text-brandGold"></i>
+                <span>Operating Hours</span>
+              </h4>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping mr-1.5"></span> Open Daily
+              </span>
+            </div>
+            
+            <div class="space-y-2.5 text-xs sm:text-sm">
+              <div class="flex justify-between text-gray-300">
+                <span>Mon – Thu, Sun</span>
+                <span class="font-semibold text-white">11:30 AM – 11:00 PM</span>
+              </div>
+              <div class="flex justify-between text-gray-300">
+                <span>Friday</span>
+                <span class="font-semibold text-white">11:30 AM – 11:30 PM</span>
+              </div>
+              <div class="flex justify-between text-gray-300">
+                <span>Saturday</span>
+                <span class="font-semibold text-white">9:00 AM – 11:30 PM</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Suburb Checker Widget -->
+        <div class="bg-gray-800/80 border border-gray-700/60 rounded-2xl p-8 shadow-xl flex flex-col justify-between h-full">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-brandGold text-xl mb-6">
+              <i class="fa-solid fa-truck-ramp-box"></i>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-white mb-2">Check Suburb Delivery</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Enter your suburb name or postcode to check if Spice Dine delivers hot meals to your location.
+            </p>
+
+            <!-- Search Form -->
+            <div class="relative mb-6">
+              <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <input 
+                type="text" 
+                id="suburbInput" 
+                placeholder="e.g. Woolloongabba, Annerley, 4101..." 
+                class="w-full pl-11 pr-28 py-3.5 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-brandGold transition text-sm">
+              <button 
+                onclick="checkDelivery()" 
+                class="absolute right-1.5 top-1.5 bottom-1.5 px-4 bg-brandRed hover:bg-red-700 text-white font-bold text-xs rounded-lg transition shadow-md">
+                Check
+              </button>
+            </div>
+
+            <!-- Dynamic Result Output Box -->
+            <div id="resultBox" class="hidden rounded-xl p-4 text-sm font-medium border mb-6"></div>
+
+            <!-- Suburb Badges -->
+            <div class="pt-4 border-t border-gray-700/60">
+              <span class="text-xs text-gray-400 font-semibold block mb-3 uppercase tracking-wider">Major Delivery Suburbs</span>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <span class="bg-gray-900 border border-gray-700 px-3 py-1.5 rounded-lg text-gray-300">Woolloongabba (4102)</span>
+                <span class="bg-gray-900 border border-gray-700 px-3 py-1.5 rounded-lg text-gray-300">Annerley (4103)</span>
+                <span class="bg-gray-900 border border-gray-700 px-3 py-1.5 rounded-lg text-gray-300">South Brisbane (4101)</span>
+                <span class="bg-gray-900 border border-gray-700 px-3 py-1.5 rounded-lg text-gray-300">West End (4101)</span>
+                <span class="bg-gray-900 border border-gray-700 px-3 py-1.5 rounded-lg text-gray-300">Coorparoo (4151)</span>
+                <span class="bg-gray-900 border border-gray-700 px-3 py-1.5 rounded-lg text-gray-300">Kangaroo Point (4169)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order CTA -->
+          <div class="mt-8 pt-6 border-t border-gray-700/60 text-center">
+            <a href="https://spicedine.yumbojumbo.com.au/menu" target="_blank" class="w-full py-3.5 bg-brandRed hover:bg-red-700 text-white font-bold text-sm rounded-xl transition shadow-lg flex items-center justify-center space-x-2">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>Start Your Online Order</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 6. FOOTER SECTION -->
+  <!-- ========================================== -->
+  <footer class="bg-gray-950 border-t border-gray-800 text-gray-400 text-xs py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div>
+          <span class="text-white font-bold text-lg">Spice Dine</span>
+          <p class="text-gray-500 mt-1">80 Ipswich Rd, Woolloongabba QLD 4102 | Authentic Halal Bangladeshi Cuisine</p>
+        </div>
+
+        <div class="flex items-center space-x-6 text-gray-400">
+          <a href="#home" class="hover:text-white transition">Home</a>
+          <a href="#menu" class="hover:text-white transition">Menu</a>
+          <a href="#reviews" class="hover:text-white transition">Reviews</a>
+          <a href="#location" class="hover:text-white transition">Location</a>
+        </div>
+
+        <div class="text-gray-500">
+          &copy; Spice Dine Woolloongabba. Powered by Yumbo Jumbo.
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JS logic for Suburb Checker -->
+  <script>
+    function checkDelivery() {
+      const input = document.getElementById('suburbInput').value.trim().toLowerCase();
+      const resultBox = document.getElementById('resultBox');
+      
+      const supportedSuburbs = [
+        'woolloongabba', '4102', 'annerley', '4103', 'south brisbane', '4101', 
+        'west end', 'coorparoo', '4151', 'highgate hill', 'kangaroo point', '4169',
+        'dutton park', 'greenslopes', '4120', 'brisbane city', '4000', 'st lucia', '4067'
+      ];
+
+      if (!input) {
+        resultBox.className = 'rounded-xl p-4 text-xs font-semibold bg-amber-950/60 border border-amber-500/40 text-amber-300';
+        resultBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation mr-2"></i> Please enter a suburb name or postcode.';
+        resultBox.classList.remove('hidden');
+        return;
+      }
+
+      const isAvailable = supportedSuburbs.some(suburb => input.includes(suburb));
+
+      if (isAvailable) {
+        resultBox.className = 'rounded-xl p-4 text-xs font-semibold bg-emerald-950/60 border border-emerald-500/40 text-emerald-300';
+        resultBox.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i> Great news! We deliver directly to your area.';
+      } else {
+        resultBox.className = 'rounded-xl p-4 text-xs font-semibold bg-red-950/60 border border-red-500/40 text-red-300';
+        resultBox.innerHTML = '<i class="fa-solid fa-circle-xmark mr-2"></i> Automatic delivery couldn\'t be confirmed for this area, but takeaway pickup is available!';
+      }
+      
+      resultBox.classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
